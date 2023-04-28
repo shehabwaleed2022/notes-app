@@ -9,13 +9,13 @@
     <main>
       <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
 
-        <a href="/my-app/notes" class = "text-blue-500 underline">Go Back..</a>
+        <a href="/notes-app/notes" class = "text-blue-500 underline">Go Back..</a>
       
         <li class="mt-5"><?=htmlspecialchars($note['body'])?></li>
 
 
         <footer class="mt-6">
-          <a href="/my-app/note/edit?id=<?=$note['id']?>" class="bg-gray-500 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Edit</a>
+          <a href="/notes-app/note/edit?id=<?=$note['id']?>" class="bg-gray-500 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Edit</a>
         </footer>
 
 

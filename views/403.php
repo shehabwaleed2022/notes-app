@@ -1,19 +1,22 @@
-<?php require "views/partials/head.php"?>
-<?php $heading = 'Error'?>
-<body class="h-full">
-  <div class="min-h-full">
+<!DOCTYPE html>
+<html lang="en">
 
-    <?php require "views/partials/nav.php"?>
-    <?php require "views/partials/header.php"?>
 
-    <main>
-      <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
-        <h1 class="mb-6 text-2xl font-bold">
-          You are not authorized to view this page.
-        </h1>
-        <a href="/my-app/" class="text-blue-500 !important underline text-2xl font-bold ">Go To home</a>
-      </div>
-    </main>
+<head>
+  <meta charset="UTF-8">
+  <title>403</title>
+  <link rel="stylesheet" href="assets/css/error.css">
+</head>
+
+<body>
+  <div class="background"></div>
+  <div class="container">
+    <div class="error-message">
+      <h1>Oops!</h1>
+      <h2>403 - Forbidden</h2>
+      <p>You don't have permission to access this resource.</p>
+      <a href="/notes-app" class="button">Go Home</a>
+    </div>
   </div>
 </body>
 

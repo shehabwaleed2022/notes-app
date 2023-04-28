@@ -9,7 +9,7 @@
       <div class="max-w-md mx-auto mt-32 bg-white p-8 rounded-lg shadow-lg">
         <h2 class="text-2xl font-bold mb-4 text-center">Log In</h2>
 
-        <form action="/my-app/login" method="POST">
+        <form action="/notes-app/login" method="POST">
 
           <div class="mb-4">
             <label class="block text-gray-700 font-bold mb-2" for="email">Email</label>

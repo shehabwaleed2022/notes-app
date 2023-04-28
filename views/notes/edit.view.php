@@ -21,7 +21,7 @@
     </div>
 
     <div class="flex items-center justify-end button-container">
-      <a href="/my-app/notes" class="bg-gray-500 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" style="margin-right: 10px;">
+      <a href="/notes-app/notes" class="bg-gray-500 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" style="margin-right: 10px;">
         Cancel
       </a>
 

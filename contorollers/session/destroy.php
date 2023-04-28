@@ -6,5 +6,5 @@
 
 logout();
 
-header('location: /my-app');
+header('location: /notes-app');
 exit();

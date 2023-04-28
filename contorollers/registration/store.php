@@ -32,7 +32,7 @@ $user = $db->query('select * from users where email = :email',[
 if($user){
   // User allready have an account 
   //if yes, redirect to login page
-  header('location: /my-app');
+  header('location: /notes-app');
   exit();
 }else {
   // if no, save the account to datebase, then log the user in , then redirect the user to home page
@@ -45,7 +45,7 @@ if($user){
   // mark that the user has logged in
   login($user);
 
-  header('location: /my-app');
+  header('location: /notes-app');
   exit();
 }
 

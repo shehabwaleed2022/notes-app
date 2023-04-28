@@ -35,6 +35,6 @@ $db->query('update notes set body =:body where id = :id', [
 
 // redirecet the user
 
-header('location: /my-app/notes');
+header('location: /notes-app/notes');
 
 die();

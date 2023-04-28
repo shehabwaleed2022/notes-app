@@ -39,7 +39,7 @@ if($user){
       'user' => true,
       'username' => $user['username'],
     ]);
-    header('location: /my-app');
+    header('location: /notes-app');
     exit();
   }
 

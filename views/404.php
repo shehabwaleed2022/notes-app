@@ -1,19 +1,21 @@
-<?php require "views/partials/head.php"?>
-<?php $heading = 'Error'?>
-<body class="h-full">
-  <div class="min-h-full">
+<!DOCTYPE html>
+<html lang="en">
 
-    <?php require "views/partials/nav.php"?>
-    <?php require "views/partials/header.php"?>
+<head>
+  <meta charset="UTF-8">
+  <title>404</title>
+  <link rel="stylesheet" href="assets/css/error.css">
+</head>
 
-    <main>
-      <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
-        <h1 class="text-2xl font-bold">
-          Sorry, Page not found.
-        </h1>
-        <a href="/my-app/" class="text-blue underline">Go To home</a>
-      </div>
-    </main>
+<body>
+  <div class="background"></div>
+  <div class="container">
+    <div class="error-message">
+      <h1>Oops!</h1>
+      <h2>404 - Page Not Found</h2>
+      <p>The page you are looking for might have been removed, had its name changed or is temporarily unavailable.</p>
+      <a href="/notes-app" class="button">Go Home</a>
+    </div>
   </div>
 </body>
 

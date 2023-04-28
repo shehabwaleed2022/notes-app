@@ -71,7 +71,7 @@
 
           <div class="ml-6">
             <?php if ($_SESSION['user'] ?? false): ?>
-              <form method="POST" action="/my-app/session">
+              <form method="POST" action="/notes-app/session">
                 <input type="hidden" name="_method" value="DELETE">
                 <button type="submit"
                   class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Logout</button>

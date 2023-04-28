@@ -16,7 +16,7 @@ if (empty($errors)) {
         'user_id' => 1,
     ]);
     // Redirecet the user to his notes page
-    header('location: /my-app/notes');
+    header('location: /notes-app/notes');
     exit();
 } else {
     return view('notes/create.view.php', [
