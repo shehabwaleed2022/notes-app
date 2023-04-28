@@ -2,23 +2,23 @@
 
 
 
-$router->get('/notes-app/', 'contorollers/home.php');
-$router->get('/notes-app/about', 'contorollers/about.php');
-$router->get('/notes-app/contact', 'contorollers/contact.php');
+$router->get('/notes-app/', 'home.php');
+$router->get('/notes-app/about', 'about.php');
+$router->get('/notes-app/contact', 'contact.php');
 
-$router->get('/notes-app/notes', 'contorollers/notes/index.php')->only('auth');
-$router->get('/notes-app/note', 'contorollers/notes/show.php');
-$router->get('/notes-app/notes/create', 'contorollers/notes/create.php');
-$router->post('/notes-app/notes/create', 'contorollers/notes/store.php');
+$router->get('/notes-app/notes', 'notes/index.php')->only('auth');
+$router->get('/notes-app/note', 'notes/show.php');
+$router->get('/notes-app/notes/create', 'notes/create.php');
+$router->post('/notes-app/notes/create', 'notes/store.php');
 
-$router->get('/notes-app/note/edit', 'contorollers/notes/edit.php');
-$router->patch('/notes-app/note/edit', 'contorollers/notes/update.php');
+$router->get('/notes-app/note/edit', 'notes/edit.php');
+$router->patch('/notes-app/note/edit', 'notes/update.php');
 
-$router->delete('/notes-app/note/edit', 'contorollers/notes/destroy.php');
+$router->delete('/notes-app/note/edit', 'notes/destroy.php');
 
-$router->get('/notes-app/register', 'contorollers/registration/create.php')->only('guest');
-$router->post('/notes-app/register', 'contorollers/registration/store.php')->only('guest');
+$router->get('/notes-app/register', 'registration/create.php')->only('guest');
+$router->post('/notes-app/register', 'registration/store.php')->only('guest');
 
-$router->get('/notes-app/login', 'contorollers/session/create.php')->only('guest');
-$router->post('/notes-app/login', 'contorollers/session/store.php')->only('guest');
-$router->delete('/notes-app/session', 'contorollers/session/destroy.php')->only('auth');
+$router->get('/notes-app/login', 'session/create.php')->only('guest');
+$router->post('/notes-app/login', 'session/store.php')->only('guest');
+$router->delete('/notes-app/session', 'session/destroy.php')->only('auth');

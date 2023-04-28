@@ -2,6 +2,7 @@
 // This part display the errors to browser
 ini_set('display_errors', 1);
 ini_set('error_reporting', 1);
+const BASE_PATH = __DIR__ . '/';
 
 require 'Core/functions.php';
 require 'Core/Router.php';
