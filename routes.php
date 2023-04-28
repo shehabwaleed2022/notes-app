@@ -1,15 +1,5 @@
 <?php
 
-// The old router
-// return [
-// '/my-app/' => 'contorollers/home.php',
-// '/my-app/contact' => 'contorollers/contact.php',
-// '/my-app/about' => 'contorollers/about.php',
-// '/my-app/notes' => 'contorollers/notes/index.php',
-// '/my-app/note' => 'contorollers/notes/show.php',
-// '/my-app/notes/create' => 'contorollers/notes/create.php',
-// ];
-// 
 
 
 $router->get('/notes-app/', 'contorollers/home.php');
