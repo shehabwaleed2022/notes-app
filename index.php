@@ -14,7 +14,6 @@ spl_autoload_register(function ($class) {
 }); // Will automaticlly require the undefined classes into our project
 
 require 'bootstrap.php';
-echo "shehab";
 $router = new \Core\Router();
 $routes = require "routes.php";
 $currentUrl = parse_url($_SERVER['REQUEST_URI'])['path'];
