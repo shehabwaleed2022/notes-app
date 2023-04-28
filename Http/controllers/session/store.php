@@ -1,51 +1,23 @@
 <?php
-use Core\App;
-use Core\Database;
-use Core\Validator;
 use Http\Forms\LoginForm;
+use Core\Authanticator;
 
-$db = App::resolve(Database::class);
 $email = $_POST['email'];
 $password = $_POST['password'];
 
-// login the user if the credentials match.
+// Validations
 
 $form = new LoginForm();
 
-if (!$form->validate($email, $password)) {
-  return view('session/create.view.php', [
-    'errors' => $form->errors(),
-  ]);
-} else {
-  view('session/create.view.php');
-}
+if ($form->validate($email, $password)) {
+  $auth = new Authanticator();
 
-
-
-
-// match credentials
-$user = $db->query('select * from users where email = :email', [
-  'email' => $email,
-])->find();
-
-
-//we have the user and we will Check the password for that account.
-if ($user) {
-  if (password_verify($password, $user['pass'])) {
-    login([
-      'email' => $email,
-      'user' => true,
-      'username' => $user['username'],
-    ]);
-    header('location: /notes-app');
-    exit();
+  if ($auth->attempt($email, $password)) {
+    redirect('/notes-app/');
   }
 
+  $form->error('email', 'No matching account found for that email address , and password.');
 }
-
-// If the password or email validation fails
 return view('session/create.view.php', [
-  'errors' => [
-    'email' => 'No matching account found for that email address , and password.',
-  ]
+  'errors' => $form->errors(),
 ]);

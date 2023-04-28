@@ -28,30 +28,11 @@ function view($bath, $attributes = [])
   require "views/" . $bath;
 }
 
-
-function login($user)
-{
-  $_SESSION['user'] = [
-    'email' => $user['email'],
-    'username' => $user['username'],
-  ];
-  session_regenerate_id(true); // To have a high security
-}
-
-
-function logout(){
-  $_SESSION = []; // create our session super global
-  session_destroy();
-
-  // Delete the cookie
-  $params = session_get_cookie_params();
-  setcookie('PHPSESSID', '', [
-    'expires' => 3600,
-    'domain' => $params['domain'],
-    'path' => $params['path'],
-  ]);
-}
-
 function base_path($path){
   return BASE_PATH . $path; 
+}
+
+function redirect($path){
+  header("location: {$path}");
+  exit();
 }

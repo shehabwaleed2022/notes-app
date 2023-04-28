@@ -24,4 +24,8 @@ class LoginForm
     return $this->errors;
   }
 
+  public function error($field, $errorMsg){
+    $this->errors['field'] = $errorMsg;
+  }
+
 }
