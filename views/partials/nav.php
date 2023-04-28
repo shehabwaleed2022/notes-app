@@ -9,17 +9,17 @@
         <div class="hidden md:block">
           <div class="ml-10 flex items-baseline space-x-4">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-            <a href="/my-app"
+            <a href="/notes-app"
               class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
               aria-current="page">home</a>
 
-            <a href="/my-app/about"
+            <a href="/notes-app/about"
               class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">about</a>
             <?php if ($_SESSION['user']): ?>
-              <a href="/my-app/notes"
+              <a href="/notes-app/notes"
                 class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">notes</a>
             <?php endif; ?>
-            <a href="/my-app/contact"
+            <a href="/notes-app/contact"
               class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">contact</a>
           </div>
         </div>
@@ -48,9 +48,9 @@
                     src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                     alt="">
                 <?php else: ?>
-                  <a href="/my-app/register"
+                  <a href="/notes-app/register"
                     class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Register</a>
-                  <a href="/my-app/login"
+                  <a href="/notes-app/login"
                     class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Login</a>
                 <?php endif ?>
               </button>
