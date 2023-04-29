@@ -39,15 +39,6 @@ class Authanticator
 
   public function logout()
   {
-    $_SESSION = []; // create our session super global
-    session_destroy();
-
-    // Delete the cookie
-    $params = session_get_cookie_params();
-    setcookie('PHPSESSID', '', [
-      'expires' => 3600,
-      'domain' => $params['domain'],
-      'path' => $params['path'],
-    ]);
+    session::destroy();
   }
 }
