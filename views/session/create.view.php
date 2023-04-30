@@ -1,4 +1,4 @@
-<?php require "views/partials/head.php" ?>
+<?php require "views/partials/head.php";?>
 
 <body class="h-full bg-gray-100">
   <div class="min-h-full flex flex-col">
@@ -15,7 +15,7 @@
             <label class="block text-gray-700 font-bold mb-2" for="email">Email</label>
             <input
               class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              name="email" type="email" placeholder="johndoe@example.com">
+              name="email" type="email" placeholder="johndoe@example.com" value=<?=old('email')?>>
 
           </div>
 

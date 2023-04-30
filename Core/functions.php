@@ -28,11 +28,18 @@ function view($bath, $attributes = [])
   require "views/" . $bath;
 }
 
-function base_path($path){
-  return BASE_PATH . $path; 
+function base_path($path)
+{
+  return BASE_PATH . $path;
 }
 
-function redirect($path){
+function redirect($path)
+{
   header("location: {$path}");
   exit();
+}
+
+function old($key, $default = "")
+{
+  return Core\Session::get('old')[$key] ?? $default;
 }
