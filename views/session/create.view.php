@@ -1,5 +1,4 @@
 <?php require "views/partials/head.php";?>
-
 <body class="h-full bg-gray-100">
   <div class="min-h-full flex flex-col">
 
