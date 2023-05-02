@@ -12,11 +12,12 @@ require 'Core/Router.php';
 // Sessions
 session_start();
 
-spl_autoload_register(function ($class) {
-  $class = str_replace('\\', DIRECTORY_SEPARATOR, $class);
-  require $class . '.php';
-}); // Will automaticlly require the undefined classes into our project
+// spl_autoload_register(function ($class) {
+//   $class = str_replace('\\', DIRECTORY_SEPARATOR, $class);
+//   require $class . '.php';
+// }); // Will automaticlly require the undefined classes into our project
 
+require 'vendor/autoload.php';
 require 'bootstrap.php';
 $router = new \Core\Router();
 $routes = require "routes.php";
