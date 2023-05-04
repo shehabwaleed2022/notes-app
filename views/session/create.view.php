@@ -1,9 +1,9 @@
-<?php view("partials/head.php"); ?>
+<?php require base_path("views/partials/head.php"); ?>
 
 <body class="h-full bg-gray-100">
   <div class="min-h-full flex flex-col">
 
-    <?php view("partials/nav.php") ?>
+    <?php require base_path("views/partials/nav.php") ?>
 
     <main class="flex-grow">
       <div class="max-w-md mx-auto mt-32 bg-white p-8 rounded-lg shadow-lg">
