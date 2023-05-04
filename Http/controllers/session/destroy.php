@@ -6,4 +6,4 @@ use Core\Authanticator;
 
 (new Authanticator)->logout();
 
-redirect('/notes-app');
+redirect(MAIN_NAME);

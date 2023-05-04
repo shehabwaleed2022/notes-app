@@ -1,19 +1,19 @@
-<?php require "views/partials/head.php" ?>
+<?php view("partials/head.php") ?>
 
 <body class="h-full bg-gray-100">
   <div class="min-h-full flex flex-col">
 
-    <?php require "views/partials/nav.php" ?>
+    <?php view("partials/nav.php") ?>
 
     <main class="flex-grow">
       <div class="max-w-md mx-auto mt-32 bg-white p-8 rounded-lg shadow-lg">
         <h2 class="text-2xl font-bold mb-4 text-center">Sign Up</h2>
 
-        <form action="/notes-app/register" method="POST">
+        <form action="<?= MAIN_NAME ?>/register" method="POST">
           <div class="mb-4">
             <label class="block text-gray-700 font-bold mb-2" for="name">Name</label>
             <input
-              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"\
               name="name" type="text" placeholder="John Doe">
             <? if (isset($errors['name'])): ?>
               <p class="text-red-500 text-xs mt-2">

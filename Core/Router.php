@@ -72,7 +72,7 @@ class Router
   protected function abort($statusCode = 404)
   {
     http_response_code($statusCode);
-    require "views/$statusCode.php";
+    view("$statusCode.php");
     die();
   }
 

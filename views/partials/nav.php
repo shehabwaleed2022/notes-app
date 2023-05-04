@@ -9,17 +9,17 @@
         <div class="hidden md:block">
           <div class="ml-10 flex items-baseline space-x-4">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-            <a href="/notes-app"
+            <a href="<?= MAIN_NAME ?>"
               class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
               aria-current="page">home</a>
 
-            <a href="/notes-app/about"
+            <a href="<?= MAIN_NAME ?>/about"
               class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">about</a>
             <?php if ($_SESSION['user']): ?>
-              <a href="/notes-app/notes"
+              <a href="<?= MAIN_NAME ?>/notes"
                 class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">notes</a>
             <?php endif; ?>
-            <a href="/notes-app/contact"
+            <a href="<?= MAIN_NAME ?>/contact"
               class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">contact</a>
           </div>
         </div>
@@ -48,9 +48,9 @@
                     src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                     alt="">
                 <?php else: ?>
-                  <a href="/notes-app/register"
+                  <a href="<?= MAIN_NAME ?>/register"
                     class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Register</a>
-                  <a href="/notes-app/login"
+                  <a href="<?= MAIN_NAME ?>/login"
                     class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Login</a>
                 <?php endif ?>
               </button>
@@ -71,7 +71,7 @@
 
           <div class="ml-6">
             <?php if ($_SESSION['user'] ?? false): ?>
-              <form method="POST" action="/notes-app/session">
+              <form method="POST" action="<?= MAIN_NAME ?>/session">
                 <input type="hidden" name="_method" value="DELETE">
                 <button type="submit"
                   class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Logout</button>

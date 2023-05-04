@@ -7,5 +7,5 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?= $heading?></title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="/notes-app/views/assets/css/style.css">
+  <link rel="stylesheet" href="<?= MAIN_NAME ?>/views/assets/css/style.css">
 </head>

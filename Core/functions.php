@@ -14,6 +14,10 @@ function abort($statusCode = 404)
   die();
 }
 
+function base_path($path)
+{
+  return BASE_PATH . $path;
+}
 function authorize($condition, $status = 403)
 {
   if ($condition) {
@@ -22,16 +26,12 @@ function authorize($condition, $status = 403)
 
 }
 
-function view($bath, $attributes = [])
+function view($path, $attributes = [])
 {
   extract($attributes);
-  require "views/" . $bath;
+  require base_path("views/" . $path);
 }
 
-function base_path($path)
-{
-  return BASE_PATH . $path;
-}
 
 function redirect($path)
 {

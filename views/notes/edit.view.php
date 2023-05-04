@@ -1,10 +1,10 @@
-<?php require "views/partials/head.php"?>
+<?php view("partials/head.php")?>
 
 <body class="h-full">
   <div class="min-h-full">
 
-    <?php require "views/partials/nav.php"?>
-    <?php require "views/partials/header.php"?>
+    <?php view("partials/nav.php")?>
+    <?php view("partials/header.php")?>
 
     <main>
       <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
@@ -21,7 +21,7 @@
     </div>
 
     <div class="flex items-center justify-end button-container">
-      <a href="/notes-app/notes" class="bg-gray-500 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" style="margin-right: 10px;">
+      <a href="<?= MAIN_NAME ?>/notes" class="bg-gray-500 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" style="margin-right: 10px;">
         Cancel
       </a>
 
