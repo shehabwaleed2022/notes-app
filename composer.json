@@ -1,18 +1,28 @@
 {
-    "name": "sheha/notes-app",
+    "name": "shehab/notes-app",
     "autoload": {
         "psr-4": {
-            "Sheha\\NotesApp\\": "src/",
+            "Shehab\\NotesApp\\": "src/",
             "Core\\": "Core/",
             "Http\\": "Http/"
+
         }
     },
     "authors": [
         {
-            "name": "Shehab waleed",
+            "name": "shehab",
             "email": "shehabwaleed2010@gmail.com"
         }
     ],
-    "require": {}
-
+    "require": {
+        "illuminate/collections": "^10.9"
+    },
+    "require-dev": {
+        "pestphp/pest": "^2.6"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
 }
